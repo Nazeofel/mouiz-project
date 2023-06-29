@@ -1,23 +1,8 @@
 const PORT = process.env.PORT || 8080;
 const express = require("express");
-const axios = require("axios");
 const cheerio = require("cheerio");
-// const fetch = require("node-fetch");
 
 const app = express();
-
-const memesWebsites = [
-  {
-    name: "programmerhumor",
-    address: "https://programmerhumor.io/",
-    base: "",
-  },
-  // {
-  //   name: "commitstrip",
-  //   address: "https://commitstrip.com/",
-  //   base: "",
-  // },
-];
 
 let memes = [];
 

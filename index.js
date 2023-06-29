@@ -35,6 +35,7 @@ const fetchMemes = async () => {
         }
       });
   }
+  return memes;
 };
 
 app.get("/", async (req, res, next) => {
@@ -42,13 +43,8 @@ app.get("/", async (req, res, next) => {
 });
 
 app.get("/api/memes", async (req, res, next) => {
-  try {
-    await fetchMemes();
-    return res.json(memes);
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: "Internal Server Error" });
-  }
+  await fetchMemes();
+  return res.json(memes);
 });
 
 app.listen(PORT, () => {

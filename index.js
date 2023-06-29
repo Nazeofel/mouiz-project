@@ -7,7 +7,7 @@ const app = express();
 let memes = [];
 
 const fetchMemes = async () => {
-  for (let page = 0; page <= 1938; page++) {
+  for (let page = 0; page <= 10; page++) {
     const response = await fetch(`https://programmerhumor.io/page/${page}/`);
     const html = await response.text();
     const $ = cheerio.load(html);

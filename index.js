@@ -40,7 +40,11 @@ const fetchMemes = async (page) => {
 
 app.get("/", async (req, res, next) => {
   return res.send(
-    "Welcome to the programming memes API, MADE By Mouiz scraps data from : https://programmerhumor.io/page/1/"
+    `Welcome to the programming memes API, MADE By Mouiz scraps data from : https://programmerhumor.io/page/1/, to use it either use it like </br>
+    https://mouiz-project.vercel.app/api/memes?page=520. 520 = page to fetch. max for now is 1938
+    or
+    https://mouiz-project.vercel.app/api/memes. will fetch page one.
+    `
   );
 });
 

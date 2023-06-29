@@ -1,0 +1,26 @@
+{
+  "name": "mouiz-project",
+  "version": "1.0.0",
+  "description": "Mouiz project forked",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nazeofel/mouiz-project.git"
+  },
+  "keywords": [
+    "mouiz"
+  ],
+  "author": "Mouiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nazeofel/mouiz-project/issues"
+  },
+  "homepage": "https://github.com/Nazeofel/mouiz-project#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2"
+  }
+}

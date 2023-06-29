@@ -7,7 +7,6 @@ const app = express();
 let memes = [];
 
 const fetchMemes = async (page) => {
-  //for (let meme = 0; meme <= page; meme++) {
   const response = await fetch(
     `https://programmerhumor.io/page/${page !== undefined ? page : 1}/`
   );
@@ -36,12 +35,13 @@ const fetchMemes = async (page) => {
         memes.push(payload);
       }
     });
-  // }
   return memes;
 };
 
 app.get("/", async (req, res, next) => {
-  return res.send("Welcome to the programming memes API");
+  return res.send(
+    "Welcome to the programming memes API, MADE By Mouiz scraps data from : https://programmerhumor.io/page/1/"
+  );
 });
 
 app.get("/api/memes", async (req, res, next) => {
